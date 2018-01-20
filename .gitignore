@@ -3,3 +3,11 @@
 ################################################################################
 
 /Cube/.vs
+/Cube/Data
+/Cube/INSPINIA.Cube/bin
+/Cube/INSPINIA.Cube/Config
+/Cube/INSPINIA.Cube/Content
+/Cube/INSPINIA.Cube/obj/Debug
+/Cube/INSPINIA.Cube/Plugins
+/Cube/Log
+/Cube/packages
