@@ -100,6 +100,8 @@ WriteAttribute("href", Tuple.Create(" href=\"", 467), Tuple.Create("\"", 497)
 , 474), false)
 );
 
+WriteLiteral(" class=\"editcell\"");
+
 WriteLiteral("><i");
 
 WriteLiteral(" class=\"fa fa-pencil\"");
@@ -121,15 +123,17 @@ WriteLiteral("    <a");
 
 WriteLiteral(" title=\"详细\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 662), Tuple.Create("\"", 694)
+WriteAttribute("href", Tuple.Create(" href=\"", 679), Tuple.Create("\"", 711)
             
             #line 22 "..\..\Views\Shared\_List_Data_Action.cshtml"
-, Tuple.Create(Tuple.Create("", 669), Tuple.Create<System.Object, System.Int32>(Url.Action("Detail", rv)
+, Tuple.Create(Tuple.Create("", 686), Tuple.Create<System.Object, System.Int32>(Url.Action("Detail", rv)
             
             #line default
             #line hidden
-, 669), false)
+, 686), false)
 );
+
+WriteLiteral(" class=\"editcell\"");
 
 WriteLiteral("><i");
 
@@ -158,25 +162,25 @@ WriteLiteral("    <input");
 
 WriteLiteral(" type=\"hidden\"");
 
-WriteAttribute("id", Tuple.Create(" id=\"", 860), Tuple.Create("\"", 876)
-, Tuple.Create(Tuple.Create("", 865), Tuple.Create("delete_", 865), true)
+WriteAttribute("id", Tuple.Create(" id=\"", 894), Tuple.Create("\"", 910)
+, Tuple.Create(Tuple.Create("", 899), Tuple.Create("delete_", 899), true)
             
             #line 26 "..\..\Views\Shared\_List_Data_Action.cshtml"
-, Tuple.Create(Tuple.Create("", 872), Tuple.Create<System.Object, System.Int32>(eid
+, Tuple.Create(Tuple.Create("", 906), Tuple.Create<System.Object, System.Int32>(eid
             
             #line default
             #line hidden
-, 872), false)
+, 906), false)
 );
 
-WriteAttribute("value", Tuple.Create(" value=\"", 877), Tuple.Create("\"", 910)
+WriteAttribute("value", Tuple.Create(" value=\"", 911), Tuple.Create("\"", 944)
             
             #line 26 "..\..\Views\Shared\_List_Data_Action.cshtml"
-, Tuple.Create(Tuple.Create("", 885), Tuple.Create<System.Object, System.Int32>(Url.Action("Delete", rv)
+, Tuple.Create(Tuple.Create("", 919), Tuple.Create<System.Object, System.Int32>(Url.Action("Delete", rv)
             
             #line default
             #line hidden
-, 885), false)
+, 919), false)
 );
 
 WriteLiteral(" />\r\n");
@@ -187,16 +191,16 @@ WriteLiteral(" href=\"#\"");
 
 WriteLiteral(" title=\"删除\"");
 
-WriteAttribute("onclick", Tuple.Create(" onclick=\"", 942), Tuple.Create("\"", 970)
-, Tuple.Create(Tuple.Create("", 952), Tuple.Create("DeleteList(\'", 952), true)
+WriteAttribute("onclick", Tuple.Create(" onclick=\"", 976), Tuple.Create("\"", 1004)
+, Tuple.Create(Tuple.Create("", 986), Tuple.Create("DeleteList(\'", 986), true)
             
             #line 27 "..\..\Views\Shared\_List_Data_Action.cshtml"
-, Tuple.Create(Tuple.Create("", 964), Tuple.Create<System.Object, System.Int32>(eid
+, Tuple.Create(Tuple.Create("", 998), Tuple.Create<System.Object, System.Int32>(eid
             
             #line default
             #line hidden
-, 964), false)
-, Tuple.Create(Tuple.Create("", 968), Tuple.Create("\')", 968), true)
+, 998), false)
+, Tuple.Create(Tuple.Create("", 1002), Tuple.Create("\')", 1002), true)
 );
 
 WriteLiteral("><i");

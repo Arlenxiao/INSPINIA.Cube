@@ -140,16 +140,7 @@ WriteLiteral("\r\n                </div>\r\n            </div>\r\n        </div>
 
 DefineSection("css", () => {
 
-WriteLiteral("\r\n    <link");
-
-WriteAttribute("href", Tuple.Create(" href=\"", 902), Tuple.Create("\"", 957)
-, Tuple.Create(Tuple.Create("", 909), Tuple.Create<System.Object, System.Int32>(Href("~/Template/css/plugins/sweetalert/sweetalert.css")
-, 909), false)
-);
-
-WriteLiteral(" rel=\"stylesheet\"");
-
-WriteLiteral(" />\r\n");
+WriteLiteral("\r\n    \r\n");
 
 });
 
@@ -157,21 +148,13 @@ DefineSection("scripts", () => {
 
 WriteLiteral("\r\n    <script");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 1013), Tuple.Create("\"", 1069)
-, Tuple.Create(Tuple.Create("", 1019), Tuple.Create<System.Object, System.Int32>(Href("~/Template/js/plugins/sweetalert/sweetalert.min.js")
-, 1019), false)
-);
-
-WriteLiteral("></script>\r\n    <script");
-
 WriteLiteral(" type=\"text/javascript\"");
 
 WriteLiteral(@">
-
         function DeleteList(id) {
             swal({
                 title: ""确定删除?"",
-                type: ""warning"",
+                //type: ""warning"",
                 showCancelButton: true,
                 confirmButtonColor: ""#DD6B55"",
                 confirmButtonText: ""确定"",

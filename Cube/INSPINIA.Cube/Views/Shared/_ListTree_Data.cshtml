@@ -17,14 +17,15 @@
 <table class="table table-striped">
     <thead>
         <tr>
-            @*@if (enableSelect)
-                {
-                    <th class="text-center" style="width:10px;"><input type="checkbox" id="chkAll" title="全选" /></th>
-                }*@
+            @if (enableSelect)
+            {
+                <th class="text-center" style="width:10px;"><input type="checkbox" id="chkAll" title="全选" /></th>
+            }
             @foreach (var item in fields)
             {
                 var sortUrl = item.OriField != null ? page.GetSortUrl(item.OriField.Name) : page.GetSortUrl(item.Name);
                 var cls = item.IsIdentity ? "text-center hidden-md hidden-sm hidden-xs" : "text-center";
+                if (item.Name.EqualIgnoreCase("ID", "Icon")) { continue; }
                 <th class="@cls" title="@item.Description"><a href="@Html.Raw(sortUrl)">@item.DisplayName</a></th>
             }
             <th class="text-center">升</th>
@@ -43,20 +44,19 @@
             }
             var id = entity["ID"];
             <tr>
-                @*@if (enableSelect)
-                    {
-                        <td class="text-center"><input type="checkbox" name="keys" value="@entity[fk.Name]" /></td>
-                    }*@
+                @if (enableSelect)
+                {
+                    <td class="text-center"><input type="checkbox" name="keys" value="@entity[fk.Name]" /></td>
+                }
                 @foreach (var item in fields)
                 {
-                    if (FirstFlag == 0)
+                    if (item.Name.EqualIgnoreCase("ID", "Icon"))
                     {
-                    @Html.Partial("_List_Data_Item_First", new Pair(entity, item))
+                        <input id="@item.Name" name="@item.Name" type="hidden" value="@entity[item.Name]" />
+                        continue;
                     }
-                    else
-                    {
-                    @Html.Partial("_List_Data_Item", new Pair(entity, item))
-                    }
+
+                    @Html.Partial("_ListTree_Data_Item", new Pair(entity, item))
 
                     FirstFlag++;
                 }

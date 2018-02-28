@@ -1,0 +1,8 @@
+﻿@using NewLife.Common;
+@{
+    //Layout = null;
+    var page = HttpRuntime.AppDomainAppVirtualPath;
+    page = page.EnsureEnd("/") + "Admin";
+
+    Response.Redirect(page);
+}

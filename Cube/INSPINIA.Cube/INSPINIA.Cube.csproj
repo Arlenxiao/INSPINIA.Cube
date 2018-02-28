@@ -159,6 +159,7 @@
     <Content Include="Template\css\plugins\slick\fonts\slick.eot" />
     <Content Include="Template\css\plugins\slick\fonts\slick.ttf" />
     <Content Include="Template\css\plugins\slick\fonts\slick.woff" />
+    <Content Include="Template\cube\Cube.js" />
     <Content Include="Template\font-awesome\fonts\fontawesome-webfont.eot" />
     <Content Include="Template\font-awesome\fonts\fontawesome-webfont.ttf" />
     <Content Include="Template\font-awesome\fonts\fontawesome-webfont.woff" />
@@ -251,6 +252,14 @@
     <Content Include="Views\Shared\_List_Toolbar_Search.cshtml">
       <Generator>RazorGenerator</Generator>
       <LastGenOutput>_List_Toolbar_Search.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\CubeHome\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_ListTree_Data_Item.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_ListTree_Data_Item.generated.cs</LastGenOutput>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -561,6 +570,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\CubeHome\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Shared\Form.generated.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -615,6 +629,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>_ListTree_Data.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_ListTree_Data_Item.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_ListTree_Data_Item.cshtml</DependentUpon>
     </Compile>
     <Compile Include="Views\Shared\_List_Data.generated.cs">
       <AutoGen>True</AutoGen>

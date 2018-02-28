@@ -32,13 +32,13 @@ namespace ASP
     using NewLife.Reflection;
     using NewLife.Web;
     
-    #line 1 "..\..\Views\Shared\_List_Data_Item.cshtml"
+    #line 1 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
     using XCode;
     
     #line default
     #line hidden
     
-    #line 2 "..\..\Views\Shared\_List_Data_Item.cshtml"
+    #line 2 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
     using XCode.Configuration;
     
     #line default
@@ -46,16 +46,16 @@ namespace ASP
     using XCode.Membership;
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorGenerator", "2.0.0.0")]
-    [System.Web.WebPages.PageVirtualPathAttribute("~/Views/Shared/_List_Data_Item.cshtml")]
-    public partial class _Views_Shared__List_Data_Item_cshtml : System.Web.Mvc.WebViewPage<dynamic>
+    [System.Web.WebPages.PageVirtualPathAttribute("~/Views/Shared/_ListTree_Data_Item.cshtml")]
+    public partial class _Views_Shared__ListTree_Data_Item_cshtml : System.Web.Mvc.WebViewPage<dynamic>
     {
-        public _Views_Shared__List_Data_Item_cshtml()
+        public _Views_Shared__ListTree_Data_Item_cshtml()
         {
         }
         public override void Execute()
         {
             
-            #line 3 "..\..\Views\Shared\_List_Data_Item.cshtml"
+            #line 3 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
   
     var pair = Model as Pair;
     var entity = pair.First as IEntity;
@@ -69,7 +69,7 @@ namespace ASP
 WriteLiteral("\r\n");
 
             
-            #line 10 "..\..\Views\Shared\_List_Data_Item.cshtml"
+            #line 10 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
  if (item.IsIdentity)
 {
 
@@ -83,7 +83,7 @@ WriteLiteral(" class=\"text-center\"");
 WriteLiteral(">");
 
             
-            #line 12 "..\..\Views\Shared\_List_Data_Item.cshtml"
+            #line 12 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
                        Write(value);
 
             
@@ -92,7 +92,7 @@ WriteLiteral(">");
 WriteLiteral("</td>\r\n");
 
             
-            #line 13 "..\..\Views\Shared\_List_Data_Item.cshtml"
+            #line 13 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
 }
 else
 {
@@ -118,7 +118,7 @@ WriteLiteral(" style=\"color: green;\"");
 WriteLiteral("></i>\r\n                </td>\r\n");
 
             
-            #line 24 "..\..\Views\Shared\_List_Data_Item.cshtml"
+            #line 24 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
             }
             else
             {
@@ -139,7 +139,7 @@ WriteLiteral(" style=\"color: red;\"");
 WriteLiteral("></i>\r\n                </td>\r\n");
 
             
-            #line 30 "..\..\Views\Shared\_List_Data_Item.cshtml"
+            #line 30 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
             }
             break;
         case TypeCode.DateTime:
@@ -153,7 +153,7 @@ WriteLiteral("></i>\r\n                </td>\r\n");
 WriteLiteral("                <td>");
 
             
-            #line 36 "..\..\Views\Shared\_List_Data_Item.cshtml"
+            #line 36 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
                 Write(((DateTime)value).ToFullString(""));
 
             
@@ -162,7 +162,7 @@ WriteLiteral("                <td>");
 WriteLiteral("</td>\r\n");
 
             
-            #line 37 "..\..\Views\Shared\_List_Data_Item.cshtml"
+            #line 37 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
             }
             else
             {
@@ -173,7 +173,7 @@ WriteLiteral("</td>\r\n");
 WriteLiteral("                <td></td>\r\n");
 
             
-            #line 41 "..\..\Views\Shared\_List_Data_Item.cshtml"
+            #line 41 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
             }
             break;
         case TypeCode.Decimal:
@@ -184,7 +184,7 @@ WriteLiteral("                <td></td>\r\n");
 WriteLiteral("            <td>");
 
             
-            #line 44 "..\..\Views\Shared\_List_Data_Item.cshtml"
+            #line 44 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
            Write(value);
 
             
@@ -193,7 +193,7 @@ WriteLiteral("            <td>");
 WriteLiteral("</td>\r\n");
 
             
-            #line 45 "..\..\Views\Shared\_List_Data_Item.cshtml"
+            #line 45 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
             break;
         case TypeCode.Single:
         case TypeCode.Double:
@@ -204,7 +204,7 @@ WriteLiteral("</td>\r\n");
 WriteLiteral("            <td>");
 
             
-            #line 48 "..\..\Views\Shared\_List_Data_Item.cshtml"
+            #line 48 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
            Write(value);
 
             
@@ -213,7 +213,7 @@ WriteLiteral("            <td>");
 WriteLiteral("</td>\r\n");
 
             
-            #line 49 "..\..\Views\Shared\_List_Data_Item.cshtml"
+            #line 49 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
             break;
         case TypeCode.Byte:
         case TypeCode.Int16:
@@ -243,7 +243,7 @@ WriteLiteral(" class=\"text-center\"");
 WriteLiteral(">");
 
             
-            #line 67 "..\..\Views\Shared\_List_Data_Item.cshtml"
+            #line 67 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
                                    Write(val);
 
             
@@ -252,7 +252,7 @@ WriteLiteral(">");
 WriteLiteral("</td>\r\n");
 
             
-            #line 68 "..\..\Views\Shared\_List_Data_Item.cshtml"
+            #line 68 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
             }
             else
             {
@@ -267,7 +267,7 @@ WriteLiteral(" class=\"text-right\"");
 WriteLiteral(">");
 
             
-            #line 71 "..\..\Views\Shared\_List_Data_Item.cshtml"
+            #line 71 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
                                   Write(Convert.ToInt64(value).ToString("n0"));
 
             
@@ -276,7 +276,7 @@ WriteLiteral(">");
 WriteLiteral("</td>\r\n");
 
             
-            #line 72 "..\..\Views\Shared\_List_Data_Item.cshtml"
+            #line 72 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
             }
             break;
         case TypeCode.String:
@@ -300,7 +300,7 @@ WriteLiteral(" class=\"text-center\"");
 WriteLiteral(">");
 
             
-            #line 84 "..\..\Views\Shared\_List_Data_Item.cshtml"
+            #line 84 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
                                        Write(Html.ActionLink(value + "", "Index", map.Provider.EntityType.Name, dic, null));
 
             
@@ -309,7 +309,7 @@ WriteLiteral(">");
 WriteLiteral("</td>\r\n");
 
             
-            #line 85 "..\..\Views\Shared\_List_Data_Item.cshtml"
+            #line 85 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
                 }
                 else if (item.Name.EqualIgnoreCase("CreateIP", "UpdateIP"))
                 {
@@ -321,7 +321,7 @@ WriteLiteral("                    <td");
 
 WriteAttribute("title", Tuple.Create(" title=\"", 2757), Tuple.Create("\"", 2792)
             
-            #line 88 "..\..\Views\Shared\_List_Data_Item.cshtml"
+            #line 88 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
 , Tuple.Create(Tuple.Create("", 2765), Tuple.Create<System.Object, System.Int32>((value+"").IPToAddress()
             
             #line default
@@ -332,7 +332,7 @@ WriteAttribute("title", Tuple.Create(" title=\"", 2757), Tuple.Create("\"", 2792
 WriteLiteral(">");
 
             
-            #line 88 "..\..\Views\Shared\_List_Data_Item.cshtml"
+            #line 88 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
                                                        Write(value);
 
             
@@ -341,7 +341,7 @@ WriteLiteral(">");
 WriteLiteral("</td>\r\n");
 
             
-            #line 89 "..\..\Views\Shared\_List_Data_Item.cshtml"
+            #line 89 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
                 }
                 else if (item.Name.EqualIgnoreCase("Remark", "Description"))
                 {
@@ -357,7 +357,7 @@ WriteLiteral(" style=\"max-width:600px;overflow:hidden;white-space: nowrap;text-
 
 WriteAttribute("title", Tuple.Create(" title=\"", 3061), Tuple.Create("\"", 3075)
             
-            #line 93 "..\..\Views\Shared\_List_Data_Item.cshtml"
+            #line 93 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
                                     , Tuple.Create(Tuple.Create("", 3069), Tuple.Create<System.Object, System.Int32>(value
             
             #line default
@@ -368,7 +368,7 @@ WriteAttribute("title", Tuple.Create(" title=\"", 3061), Tuple.Create("\"", 3075
 WriteLiteral(">");
 
             
-            #line 93 "..\..\Views\Shared\_List_Data_Item.cshtml"
+            #line 93 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
                                                                                                                        Write(value);
 
             
@@ -377,7 +377,27 @@ WriteLiteral(">");
 WriteLiteral("</td>\r\n");
 
             
-            #line 94 "..\..\Views\Shared\_List_Data_Item.cshtml"
+            #line 94 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
+                }
+                else if (item.Name.EqualIgnoreCase("TreeNodeName"))
+                {
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                    <td> ");
+
+            
+            #line 97 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
+                    Write(value);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</td>\r\n");
+
+            
+            #line 98 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
                 }
                 else
                 {
@@ -387,13 +407,13 @@ WriteLiteral("</td>\r\n");
             #line hidden
 WriteLiteral("                    <td");
 
-WriteLiteral("  class=\"text-center\"");
+WriteLiteral(" class=\"text-center\"");
 
 WriteLiteral(">");
 
             
-            #line 97 "..\..\Views\Shared\_List_Data_Item.cshtml"
-                                        Write(value);
+            #line 101 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
+                                       Write(value);
 
             
             #line default
@@ -401,7 +421,7 @@ WriteLiteral(">");
 WriteLiteral("</td>\r\n");
 
             
-            #line 98 "..\..\Views\Shared\_List_Data_Item.cshtml"
+            #line 102 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
                 }
             }
             break;

@@ -25,6 +25,7 @@
     <link href="~/Template/css/plugins/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet" />
     <link href="~/Template/css/plugins/switch/bootstrap-switch.min.css" rel="stylesheet" />
     <link href="~/Template/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet" />
+    <link href="~/Template/css/plugins/sweetalert/sweetalert.css" rel="stylesheet" />
 
     <!-- 页面内联样式 -->
     @RenderSection("css", required: false)
@@ -67,10 +68,14 @@
     <script src="~/Template/js/plugins/datetimepicker/bootstrap-datetimepicker.min.js"></script>
     <script src="~/Template/js/plugins/datetimepicker/locales/bootstrap-datetimepicker.zh-CN.js"></script>
     <script src="~/Template/js/plugins/switch/bootstrap-switch.min.js"></script>
+    <script src="~/Template/js/plugins/sweetalert/sweetalert.min.js"></script>
+
+    <script src="~/Template/cube/Cube.js"></script>
 
     <script type="text/javascript">
         $('select').addClass("form-control");
-        $("input[type=checkbox]").bootstrapSwitch();
+        //$("input[type=checkbox]").bootstrapSwitch();
+        $("input.chkSwitch").bootstrapSwitch();
 
         $(".form_datetime").datetimepicker({
             format: $(this).attr("dateformat"),
@@ -78,6 +83,16 @@
             autoclose: true,
             todayBtn: true,
             pickerPosition: "bottom-left"
+        });
+
+        @*双击跳转到form
+        _List_Data_Action.cshtml变更
+        @Html.ActionLink("编辑", "Edit", new { id = @Model },new {@class="editcell"})*@
+        $('tr').dblclick(function () {
+            var $this = $(this);
+            var row = $this.closest("tr");
+            var findcell = row.find('.editcell');
+            if (findcell.length > 0) window.location.href = findcell.attr("href");
         });
 
         var ua = navigator.userAgent.toLowerCase();

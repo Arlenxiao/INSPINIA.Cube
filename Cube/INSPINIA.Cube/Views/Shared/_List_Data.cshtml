@@ -10,10 +10,16 @@
     var page = ViewBag.Page as Pager;
     var fields = ViewBag.Fields as List<FieldItem>;
     var fk = fact.Unique;
+
+    var enableSelect = this.EnableSelect();
 }
 <table class="table table-bordered table-hover table-striped table-condensed table-data-list">
     <thead>
         <tr>
+            @if (enableSelect)
+            {
+                <th class="text-center" style="width:10px;"><input type="checkbox" id="chkAll" title="全选" /></th>
+            }
             @foreach (var item in fields)
             {
                 var sortUrl = item.OriField != null ? page.GetSortUrl(item.OriField.Name) : page.GetSortUrl(item.Name);
@@ -36,6 +42,10 @@
         @foreach (var entity in Model)
         {
             <tr>
+                @if (enableSelect)
+                {
+                    <td class="text-center"><input type="checkbox" name="keys" value="@entity[fk.Name]" /></td>
+                }
                 @foreach (var item in fields)
                 {
                     @Html.Partial("_List_Data_Item", new Pair(entity, item))

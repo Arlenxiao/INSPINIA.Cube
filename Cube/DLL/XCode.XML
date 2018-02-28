@@ -377,9 +377,6 @@
         <member name="M:XCode.Cache.EntityCache`1.#ctor">
             <summary>实例化实体缓存</summary>
         </member>
-        <member name="F:XCode.Cache.EntityCache`1._task">
-            <summary>当前更新任务</summary>
-        </member>
         <member name="P:XCode.Cache.EntityCache`1.Entities">
             <summary>实体集合。无数据返回空集合而不是null</summary>
         </member>
@@ -3132,6 +3129,9 @@
         <member name="P:XCode.DataAccessLayer.Oracle.Factory">
             <summary>工厂</summary>
         </member>
+        <member name="M:XCode.DataAccessLayer.Oracle.#ctor">
+            <summary>实例化</summary>
+        </member>
         <member name="M:XCode.DataAccessLayer.Oracle.OnCreateSession">
             <summary>创建数据库会话</summary>
             <returns></returns>
@@ -4646,11 +4646,11 @@
         <member name="M:XCode.Membership.IManageProvider.Logout">
             <summary>注销</summary>
         </member>
-        <member name="M:XCode.Membership.IManageProvider.Register(System.String,System.String,System.String,System.Boolean)">
+        <member name="M:XCode.Membership.IManageProvider.Register(System.String,System.String,System.Int32,System.Boolean)">
             <summary>注册用户</summary>
             <param name="name">用户名</param>
             <param name="password">密码</param>
-            <param name="rolename">角色名称</param>
+            <param name="roleid">角色</param>
             <param name="enable">是否启用</param>
             <returns></returns>
         </member>
@@ -4697,11 +4697,11 @@
         <member name="M:XCode.Membership.ManageProvider.Logout">
             <summary>注销</summary>
         </member>
-        <member name="M:XCode.Membership.ManageProvider.Register(System.String,System.String,System.String,System.Boolean)">
+        <member name="M:XCode.Membership.ManageProvider.Register(System.String,System.String,System.Int32,System.Boolean)">
             <summary>注册用户</summary>
             <param name="name">用户名</param>
             <param name="password">密码</param>
-            <param name="rolename">角色名称</param>
+            <param name="roleid">角色</param>
             <param name="enable">是否启用。某些系统可能需要验证审核</param>
             <returns></returns>
         </member>
@@ -4744,11 +4744,11 @@
             <param name="rememberme">是否记住密码</param>
             <returns></returns>
         </member>
-        <member name="M:XCode.Membership.ManageProvider`1.Register(System.String,System.String,System.String,System.Boolean)">
+        <member name="M:XCode.Membership.ManageProvider`1.Register(System.String,System.String,System.Int32,System.Boolean)">
             <summary>注册用户</summary>
             <param name="name">用户名</param>
             <param name="password">密码</param>
-            <param name="rolename">角色名称</param>
+            <param name="roleid">角色</param>
             <param name="enable">是否启用。某些系统可能需要验证审核</param>
             <returns></returns>
         </member>
@@ -4822,6 +4822,9 @@
         <member name="T:XCode.Membership.LogProvider`1">
             <summary>泛型日志提供者，使用泛型日志实体基类作为派生</summary>
             <typeparam name="TLog"></typeparam>
+        </member>
+        <member name="P:XCode.Membership.LogProvider`1.Provider2">
+            <summary>当前用户提供者</summary>
         </member>
         <member name="M:XCode.Membership.LogProvider`1.WriteLog(System.String,System.String,System.String,System.Int32,System.String,System.String)">
             <summary>写日志</summary>
@@ -5023,12 +5026,6 @@
         <member name="M:XCode.Membership.Log`1.OnDelete">
             <summary></summary>
             <returns></returns>
-        </member>
-        <member name="P:XCode.Membership.Log`1.CreateUserName">
-            <summary>创建人名称</summary>
-        </member>
-        <member name="P:XCode.Membership.Log`1.CreateAddress">
-            <summary>物理地址</summary>
         </member>
         <member name="M:XCode.Membership.Log`1.Search(System.String,System.Int32,System.String,System.DateTime,System.DateTime,NewLife.Web.Pager)">
             <summary>查询</summary>
@@ -6128,6 +6125,10 @@
             <summary>已重载。</summary>
             <returns></returns>
         </member>
+        <member name="M:XCode.Membership.Role`1.Update">
+            <summary>已重载。</summary>
+            <returns></returns>
+        </member>
         <member name="M:XCode.Membership.Role`1.OnLoad">
             <summary>加载权限字典</summary>
         </member>
@@ -6200,10 +6201,28 @@
             <summary>名称</summary>
         </member>
         <member name="P:XCode.Membership.Role`1.IsSystem">
-            <summary>是否系统角色。系统角色用于业务系统开发使用，禁止修改名称或删除</summary>
+            <summary>系统。系统角色用于业务系统开发使用，禁止修改名称或删除</summary>
         </member>
         <member name="P:XCode.Membership.Role`1.Remark">
             <summary>说明</summary>
+        </member>
+        <member name="P:XCode.Membership.Role`1.CreateUserID">
+            <summary>创建用户</summary>
+        </member>
+        <member name="P:XCode.Membership.Role`1.CreateIP">
+            <summary>创建地址</summary>
+        </member>
+        <member name="P:XCode.Membership.Role`1.CreateTime">
+            <summary>创建时间</summary>
+        </member>
+        <member name="P:XCode.Membership.Role`1.UpdateUserID">
+            <summary>更新用户</summary>
+        </member>
+        <member name="P:XCode.Membership.Role`1.UpdateIP">
+            <summary>更新地址</summary>
+        </member>
+        <member name="P:XCode.Membership.Role`1.UpdateTime">
+            <summary>更新时间</summary>
         </member>
         <member name="P:XCode.Membership.Role`1.Permission">
             <summary>权限。对不同资源的权限，逗号分隔，每个资源的权限子项竖线分隔</summary>
@@ -6223,10 +6242,28 @@
             <summary>名称</summary>
         </member>
         <member name="F:XCode.Membership.Role`1._.IsSystem">
-            <summary>是否系统角色。系统角色用于业务系统开发使用，禁止修改名称或删除</summary>
+            <summary>系统。系统角色用于业务系统开发使用，禁止修改名称或删除</summary>
         </member>
         <member name="F:XCode.Membership.Role`1._.Remark">
             <summary>说明</summary>
+        </member>
+        <member name="F:XCode.Membership.Role`1._.CreateUserID">
+            <summary>创建用户</summary>
+        </member>
+        <member name="F:XCode.Membership.Role`1._.CreateIP">
+            <summary>创建地址</summary>
+        </member>
+        <member name="F:XCode.Membership.Role`1._.CreateTime">
+            <summary>创建时间</summary>
+        </member>
+        <member name="F:XCode.Membership.Role`1._.UpdateUserID">
+            <summary>更新用户</summary>
+        </member>
+        <member name="F:XCode.Membership.Role`1._.UpdateIP">
+            <summary>更新地址</summary>
+        </member>
+        <member name="F:XCode.Membership.Role`1._.UpdateTime">
+            <summary>更新时间</summary>
         </member>
         <member name="F:XCode.Membership.Role`1._.Permission">
             <summary>权限。对不同资源的权限，逗号分隔，每个资源的权限子项竖线分隔</summary>
@@ -6241,10 +6278,28 @@
             <summary>名称</summary>
         </member>
         <member name="F:XCode.Membership.Role`1.__.IsSystem">
-            <summary>是否系统角色。系统角色用于业务系统开发使用，禁止修改名称或删除</summary>
+            <summary>系统。系统角色用于业务系统开发使用，禁止修改名称或删除</summary>
         </member>
         <member name="F:XCode.Membership.Role`1.__.Remark">
             <summary>说明</summary>
+        </member>
+        <member name="F:XCode.Membership.Role`1.__.CreateUserID">
+            <summary>创建用户</summary>
+        </member>
+        <member name="F:XCode.Membership.Role`1.__.CreateIP">
+            <summary>创建地址</summary>
+        </member>
+        <member name="F:XCode.Membership.Role`1.__.CreateTime">
+            <summary>创建时间</summary>
+        </member>
+        <member name="F:XCode.Membership.Role`1.__.UpdateUserID">
+            <summary>更新用户</summary>
+        </member>
+        <member name="F:XCode.Membership.Role`1.__.UpdateIP">
+            <summary>更新地址</summary>
+        </member>
+        <member name="F:XCode.Membership.Role`1.__.UpdateTime">
+            <summary>更新时间</summary>
         </member>
         <member name="F:XCode.Membership.Role`1.__.Permission">
             <summary>权限。对不同资源的权限，逗号分隔，每个资源的权限子项竖线分隔</summary>
@@ -6300,10 +6355,28 @@
             <summary>名称</summary>
         </member>
         <member name="P:XCode.Membership.IRole.IsSystem">
-            <summary>是否系统角色。系统角色用于业务系统开发使用，禁止修改名称或删除</summary>
+            <summary>系统。系统角色用于业务系统开发使用，禁止修改名称或删除</summary>
         </member>
         <member name="P:XCode.Membership.IRole.Remark">
             <summary>说明</summary>
+        </member>
+        <member name="P:XCode.Membership.IRole.CreateUserID">
+            <summary>创建用户</summary>
+        </member>
+        <member name="P:XCode.Membership.IRole.CreateIP">
+            <summary>创建地址</summary>
+        </member>
+        <member name="P:XCode.Membership.IRole.CreateTime">
+            <summary>创建时间</summary>
+        </member>
+        <member name="P:XCode.Membership.IRole.UpdateUserID">
+            <summary>更新用户</summary>
+        </member>
+        <member name="P:XCode.Membership.IRole.UpdateIP">
+            <summary>更新地址</summary>
+        </member>
+        <member name="P:XCode.Membership.IRole.UpdateTime">
+            <summary>更新时间</summary>
         </member>
         <member name="P:XCode.Membership.IRole.Permission">
             <summary>权限。对不同资源的权限，逗号分隔，每个资源的权限子项竖线分隔</summary>
@@ -6653,9 +6726,10 @@
             <summary>数据库时间转显示字符串</summary>
             <returns></returns>
         </member>
-        <member name="M:XCode.Statistics.StatModel.Fill(System.Collections.Generic.IDictionary{System.String,System.String})">
+        <member name="M:XCode.Statistics.StatModel.Fill(System.Collections.Generic.IDictionary{System.String,System.String},XCode.Statistics.StatLevels)">
             <summary>使用参数填充</summary>
-            <param name="ps"></param>
+            <param name="ps">请求参数</param>
+            <param name="defLevel">默认级别</param>
         </member>
         <member name="M:XCode.Statistics.StatModel.Equals(System.Object)">
             <summary>相等</summary>
@@ -6846,7 +6920,7 @@
             <param name="pass">密码</param>
             <returns>返回要发给客户端的对象</returns>
         </member>
-        <member name="M:XCode.Remoting.ApiUserSession.SaveLogin(NewLife.Model.IManageUser)">
+        <member name="M:XCode.Remoting.ApiUserSession.SaveLogin(NewLife.Model.IAuthUser)">
             <summary>登录或注册完成后，保存登录信息</summary>
             <param name="user"></param>
         </member>
@@ -7831,6 +7905,42 @@
             <param name="entity"></param>
             <returns></returns>
         </member>
+        <member name="M:XCode.IEntityPersistence.Insert(XCode.IEntityOperate,System.String[],System.Object[])">
+            <summary>把一个实体对象持久化到数据库</summary>
+            <param name="factory">实体工厂</param>
+            <param name="names">更新属性列表</param>
+            <param name="values">更新值列表</param>
+            <returns>返回受影响的行数</returns>
+        </member>
+        <member name="M:XCode.IEntityPersistence.Update(XCode.IEntityOperate,System.String,System.String)">
+            <summary>更新一批实体数据</summary>
+            <param name="factory">实体工厂</param>
+            <param name="setClause">要更新的项和数据</param>
+            <param name="whereClause">指定要更新的实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:XCode.IEntityPersistence.Update(XCode.IEntityOperate,System.String[],System.Object[],System.String[],System.Object[])">
+            <summary>更新一批实体数据</summary>
+            <param name="factory">实体工厂</param>
+            <param name="setNames">更新属性列表</param>
+            <param name="setValues">更新值列表</param>
+            <param name="whereNames">条件属性列表</param>
+            <param name="whereValues">条件值列表</param>
+            <returns>返回受影响的行数</returns>
+        </member>
+        <member name="M:XCode.IEntityPersistence.Delete(XCode.IEntityOperate,System.String)">
+            <summary>从数据库中删除指定条件的实体对象。</summary>
+            <param name="factory">实体工厂</param>
+            <param name="whereClause">限制条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:XCode.IEntityPersistence.Delete(XCode.IEntityOperate,System.String[],System.Object[])">
+            <summary>从数据库中删除指定属性列表和值列表所限定的实体对象。</summary>
+            <param name="factory">实体工厂</param>
+            <param name="names">属性列表</param>
+            <param name="values">值列表</param>
+            <returns></returns>
+        </member>
         <member name="M:XCode.IEntityPersistence.GetPrimaryCondition(XCode.IEntity)">
             <summary>获取主键条件</summary>
             <param name="entity"></param>
@@ -7858,6 +7968,42 @@
         <member name="M:XCode.EntityPersistence.Delete(XCode.IEntity)">
             <summary>删除</summary>
             <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XCode.EntityPersistence.Insert(XCode.IEntityOperate,System.String[],System.Object[])">
+            <summary>把一个实体对象持久化到数据库</summary>
+            <param name="factory">实体工厂</param>
+            <param name="names">更新属性列表</param>
+            <param name="values">更新值列表</param>
+            <returns>返回受影响的行数</returns>
+        </member>
+        <member name="M:XCode.EntityPersistence.Update(XCode.IEntityOperate,System.String,System.String)">
+            <summary>更新一批实体数据</summary>
+            <param name="factory">实体工厂</param>
+            <param name="setClause">要更新的项和数据</param>
+            <param name="whereClause">指定要更新的实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:XCode.EntityPersistence.Update(XCode.IEntityOperate,System.String[],System.Object[],System.String[],System.Object[])">
+            <summary>更新一批实体数据</summary>
+            <param name="factory">实体工厂</param>
+            <param name="setNames">更新属性列表</param>
+            <param name="setValues">更新值列表</param>
+            <param name="whereNames">条件属性列表</param>
+            <param name="whereValues">条件值列表</param>
+            <returns>返回受影响的行数</returns>
+        </member>
+        <member name="M:XCode.EntityPersistence.Delete(XCode.IEntityOperate,System.String)">
+            <summary>从数据库中删除指定条件的实体对象。</summary>
+            <param name="factory">实体工厂</param>
+            <param name="whereClause">限制条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:XCode.EntityPersistence.Delete(XCode.IEntityOperate,System.String[],System.Object[])">
+            <summary>从数据库中删除指定属性列表和值列表所限定的实体对象。</summary>
+            <param name="factory">实体工厂</param>
+            <param name="names">属性列表</param>
+            <param name="values">值列表</param>
             <returns></returns>
         </member>
         <member name="M:XCode.EntityPersistence.GetSql(XCode.IEntity,System.ComponentModel.DataObjectMethodType)">
@@ -8149,6 +8295,11 @@
             <param name="where">查询条件</param>
             <returns></returns>
         </member>
+        <member name="M:XCode.Entity`1.Find(System.String)">
+            <summary>根据条件查找单个实体</summary>
+            <param name="whereClause">查询条件</param>
+            <returns></returns>
+        </member>
         <member name="M:XCode.Entity`1.Find(XCode.Expression)">
             <summary>根据条件查找单个实体</summary>
             <param name="where">查询条件</param>
@@ -8318,9 +8469,29 @@
             <param name="obj">实体对象</param>
             <returns>返回受影响的行数</returns>
         </member>
+        <member name="M:XCode.Entity`1.Insert(System.String[],System.Object[])">
+            <summary>把一个实体对象持久化到数据库</summary>
+            <param name="names">更新属性列表</param>
+            <param name="values">更新值列表</param>
+            <returns>返回受影响的行数</returns>
+        </member>
         <member name="M:XCode.Entity`1.Update(`0)">
             <summary>把一个实体对象更新到数据库</summary>
             <param name="obj">实体对象</param>
+            <returns>返回受影响的行数</returns>
+        </member>
+        <member name="M:XCode.Entity`1.Update(System.String,System.String)">
+            <summary>更新一批实体数据</summary>
+            <param name="setClause">要更新的项和数据</param>
+            <param name="whereClause">指定要更新的实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:XCode.Entity`1.Update(System.String[],System.Object[],System.String[],System.Object[])">
+            <summary>更新一批实体数据</summary>
+            <param name="setNames">更新属性列表</param>
+            <param name="setValues">更新值列表</param>
+            <param name="whereNames">条件属性列表</param>
+            <param name="whereValues">条件值列表</param>
             <returns>返回受影响的行数</returns>
         </member>
         <member name="M:XCode.Entity`1.Delete(`0)">
@@ -8330,6 +8501,17 @@
             </summary>
             <param name="obj">实体对象</param>
             <returns>返回受影响的行数，可用于判断被删除了多少行，从而知道操作是否成功</returns>
+        </member>
+        <member name="M:XCode.Entity`1.Delete(System.String)">
+            <summary>从数据库中删除指定条件的实体对象。</summary>
+            <param name="whereClause">限制条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:XCode.Entity`1.Delete(System.String[],System.Object[])">
+            <summary>从数据库中删除指定属性列表和值列表所限定的实体对象。</summary>
+            <param name="names">属性列表</param>
+            <param name="values">值列表</param>
+            <returns></returns>
         </member>
         <member name="M:XCode.Entity`1.Save(`0)">
             <summary>把一个实体对象更新到数据库</summary>
@@ -9659,30 +9841,6 @@
         <member name="E:XCode.Transform.EntityTransform.OnTransformEntity">
             <summary>转换实体时触发</summary>
         </member>
-        <member name="T:XCode.Web.UserBehaviorModule">
-            <summary>用户行为模块，在线和操作记录</summary>
-        </member>
-        <member name="M:XCode.Web.UserBehaviorModule.System#Web#IHttpModule#Init(System.Web.HttpApplication)">
-            <summary>初始化模块，准备拦截请求。</summary>
-            <param name="context"></param>
-        </member>
-        <member name="P:XCode.Web.UserBehaviorModule.WebOnline">
-            <summary>Web在线</summary>
-        </member>
-        <member name="P:XCode.Web.UserBehaviorModule.WebBehavior">
-            <summary>访问记录</summary>
-        </member>
-        <member name="P:XCode.Web.UserBehaviorModule.WebStatistics">
-            <summary>访问统计</summary>
-        </member>
-        <member name="P:XCode.Web.UserBehaviorModule.ExcludeSuffixes">
-            <summary>忽略的后缀</summary>
-        </member>
-        <member name="M:XCode.Web.UserBehaviorModule.GetError(System.Web.HttpContext)">
-            <summary>获取错误，排除HttpException</summary>
-            <param name="ctx"></param>
-            <returns></returns>
-        </member>
         <member name="T:XCode.Web.EntityGrid">
             <summary>用于显示数据的网格</summary>
         </member>
@@ -9727,17 +9885,43 @@
         <member name="M:XCode.Web.EntityGrid.Select">
             <summary>执行数据查询</summary>
         </member>
+        <member name="T:XCode.Web.UserBehaviorModule">
+            <summary>用户行为模块，在线和操作记录</summary>
+        </member>
+        <member name="M:XCode.Web.UserBehaviorModule.System#Web#IHttpModule#Init(System.Web.HttpApplication)">
+            <summary>初始化模块，准备拦截请求。</summary>
+            <param name="context"></param>
+        </member>
+        <member name="P:XCode.Web.UserBehaviorModule.WebOnline">
+            <summary>Web在线</summary>
+        </member>
+        <member name="P:XCode.Web.UserBehaviorModule.WebBehavior">
+            <summary>访问记录</summary>
+        </member>
+        <member name="P:XCode.Web.UserBehaviorModule.WebStatistics">
+            <summary>访问统计</summary>
+        </member>
+        <member name="P:XCode.Web.UserBehaviorModule.ExcludeSuffixes">
+            <summary>忽略的后缀</summary>
+        </member>
+        <member name="M:XCode.Web.UserBehaviorModule.GetError(System.Web.HttpContext)">
+            <summary>获取错误，排除HttpException</summary>
+            <param name="ctx"></param>
+            <returns></returns>
+        </member>
         <member name="T:XCode.Web.DbRunTimeModule">
             <summary>页面查询执行时间模块</summary>
         </member>
         <member name="P:XCode.Web.DbRunTimeModule.DbRunTimeFormat">
             <summary>执行时间字符串</summary>
         </member>
-        <member name="M:XCode.Web.DbRunTimeModule.OnInit">
+        <member name="M:XCode.Web.DbRunTimeModule.OnInit(System.Web.HttpContext)">
             <summary>初始化模块，准备拦截请求。</summary>
+            <param name="context"></param>
         </member>
-        <member name="M:XCode.Web.DbRunTimeModule.Render">
+        <member name="M:XCode.Web.DbRunTimeModule.Render(System.Web.HttpContext)">
             <summary>输出</summary>
+            <param name="context"></param>
             <returns></returns>
         </member>
         <member name="T:XCode.IEntityTreeSetting">
