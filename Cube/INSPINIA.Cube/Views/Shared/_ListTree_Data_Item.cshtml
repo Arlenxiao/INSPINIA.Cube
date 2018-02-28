@@ -92,13 +92,9 @@ else
                     //防止内容过长
                     <td style="max-width:600px;overflow:hidden;white-space: nowrap;text-overflow: ellipsis;" title="@value">@value</td>
                 }
-                else if (item.Name.EqualIgnoreCase("TreeNodeName"))
-                {
-                    <td> @value</td>
-                }
                 else
                 {
-                    <td class="text-center">@value</td>
+                    <td>@value</td>
                 }
             }
             break;

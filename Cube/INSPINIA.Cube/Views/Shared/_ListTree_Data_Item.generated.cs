@@ -379,17 +379,17 @@ WriteLiteral("</td>\r\n");
             
             #line 94 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
                 }
-                else if (item.Name.EqualIgnoreCase("TreeNodeName"))
+                else
                 {
 
             
             #line default
             #line hidden
-WriteLiteral("                    <td> ");
+WriteLiteral("                    <td>");
 
             
             #line 97 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
-                    Write(value);
+                   Write(value);
 
             
             #line default
@@ -398,30 +398,6 @@ WriteLiteral("</td>\r\n");
 
             
             #line 98 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
-                }
-                else
-                {
-
-            
-            #line default
-            #line hidden
-WriteLiteral("                    <td");
-
-WriteLiteral(" class=\"text-center\"");
-
-WriteLiteral(">");
-
-            
-            #line 101 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
-                                       Write(value);
-
-            
-            #line default
-            #line hidden
-WriteLiteral("</td>\r\n");
-
-            
-            #line 102 "..\..\Views\Shared\_ListTree_Data_Item.cshtml"
                 }
             }
             break;
