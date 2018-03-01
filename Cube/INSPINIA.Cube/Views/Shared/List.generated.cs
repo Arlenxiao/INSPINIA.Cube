@@ -67,6 +67,8 @@ namespace ASP
     var fact = ViewBag.Factory as IEntityOperate;
     var page = ViewBag.Page as Pager;
 
+    var enableSelect = this.EnableSelect();
+
             
             #line default
             #line hidden
@@ -97,7 +99,7 @@ WriteLiteral(">\r\n");
 WriteLiteral("                    ");
 
             
-            #line 16 "..\..\Views\Shared\List.cshtml"
+            #line 18 "..\..\Views\Shared\List.cshtml"
                Write(Html.Partial("_List_Toolbar"));
 
             
@@ -112,7 +114,7 @@ WriteLiteral(">\r\n");
 WriteLiteral("                    ");
 
             
-            #line 19 "..\..\Views\Shared\List.cshtml"
+            #line 21 "..\..\Views\Shared\List.cshtml"
                Write(Html.Partial("_List_Data"));
 
             
@@ -129,7 +131,7 @@ WriteLiteral(">\r\n");
 WriteLiteral("                    ");
 
             
-            #line 23 "..\..\Views\Shared\List.cshtml"
+            #line 25 "..\..\Views\Shared\List.cshtml"
                Write(Html.Partial("_List_Pager"));
 
             
@@ -140,7 +142,7 @@ WriteLiteral("\r\n                </div>\r\n            </div>\r\n        </div>
 
 DefineSection("css", () => {
 
-WriteLiteral("\r\n    \r\n");
+WriteLiteral("\r\n\r\n");
 
 });
 
@@ -164,15 +166,59 @@ WriteLiteral(@">
             },
                 function (isConfirm) {
                     if (isConfirm) {
-                        swal({ title: ""删除成功!"", type: ""success"", timer: 1500});
+                        swal({ title: ""删除成功!"", type: ""success"", timer: 1500 });
                         setTimeout(function () { location = $(""#delete_"" + id).val(); }, 1000);
-                    } 
+                    }
                 });
         }
 
     </script>
 ");
 
+            
+            #line 56 "..\..\Views\Shared\List.cshtml"
+    
+            
+            #line default
+            #line hidden
+            
+            #line 56 "..\..\Views\Shared\List.cshtml"
+     if (enableSelect)
+    {
+
+            
+            #line default
+            #line hidden
+WriteLiteral("        <script>\r\n            $(function () {\r\n                var $toolbarContex" +
+"t = $(\'.toolbar-batch\'),\r\n                    $batchButtons = $(\'button[data-act" +
+"ion=\"action\"], input[data-action=\"action\"]\'), //button, input=button, a 3种类型都可以\r" +
+"\n                    $table = $(\'.table\'),\r\n                    $keys = $(\'input" +
+"[name=\"keys\"]\', $table);\r\n\r\n                $table.on(\'click\', \'#chkAll\', functi" +
+"on () {\r\n                    // 全选\r\n                    $keys.prop(\'checked\', th" +
+"is.checked);\r\n                    // 启用禁用批量操作区\r\n                    $batchButton" +
+"s.prop(\'disabled\', !this.checked);\r\n                });\r\n\r\n                $tabl" +
+"e.on(\'click.checked\', \'tbody input[name=\"keys\"]\', function (e) {\r\n              " +
+"      //页面中所有的checkbox\r\n                    var allbox = $table.find(\'tbody :che" +
+"ckbox[name=\"keys\"]\');\r\n                    //页面中所选中的checkbox\r\n                  " +
+"  var selecteds = $table.find(\'tbody :checkbox:checked[name=\"keys\"]\');\r\n        " +
+"            if (selecteds.length > 0) {\r\n                        // 启用禁用批量操作区\r\n " +
+"                       $batchButtons.prop(\'disabled\', false);\r\n                 " +
+"       //需要判断当前页面所有行的checkbox是否都选中，以此来决定是否需要改变checkbox#chkAll 的状态\r\n             " +
+"           if (allbox.length == selecteds.length) {\r\n                           " +
+" $table.find(\'#chkAll\').prop(\'checked\', true);\r\n                        } else {" +
+"\r\n                            $table.find(\'#chkAll\').prop(\'checked\', false);\r\n  " +
+"                      }\r\n                    }\r\n                    else {\r\n    " +
+"                    $batchButtons.prop(\'disabled\', true);\r\n                     " +
+"   $table.find(\'#chkAll\').prop(\'checked\', false);\r\n                    }\r\n      " +
+"          });\r\n            })\r\n        </script>\r\n");
+
+            
+            #line 94 "..\..\Views\Shared\List.cshtml"
+    }
+
+            
+            #line default
+            #line hidden
 });
 
         }

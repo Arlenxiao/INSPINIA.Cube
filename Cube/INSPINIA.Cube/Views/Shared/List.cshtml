@@ -6,6 +6,8 @@
 
     var fact = ViewBag.Factory as IEntityOperate;
     var page = ViewBag.Page as Pager;
+
+    var enableSelect = this.EnableSelect();
 }
 <div class="row">
     <div class="col-lg-12">
@@ -27,7 +29,7 @@
     </div>
 </div>
 @section css{
-    
+
 }
 @section scripts{
     <script type="text/javascript">
@@ -44,11 +46,50 @@
             },
                 function (isConfirm) {
                     if (isConfirm) {
-                        swal({ title: "删除成功!", type: "success", timer: 1500});
+                        swal({ title: "删除成功!", type: "success", timer: 1500 });
                         setTimeout(function () { location = $("#delete_" + id).val(); }, 1000);
-                    } 
+                    }
                 });
         }
 
     </script>
+    @if (enableSelect)
+    {
+        <script>
+            $(function () {
+                var $toolbarContext = $('.toolbar-batch'),
+                    $batchButtons = $('button[data-action="action"], input[data-action="action"]'), //button, input=button, a 3种类型都可以
+                    $table = $('.table'),
+                    $keys = $('input[name="keys"]', $table);
+
+                $table.on('click', '#chkAll', function () {
+                    // 全选
+                    $keys.prop('checked', this.checked);
+                    // 启用禁用批量操作区
+                    $batchButtons.prop('disabled', !this.checked);
+                });
+
+                $table.on('click.checked', 'tbody input[name="keys"]', function (e) {
+                    //页面中所有的checkbox
+                    var allbox = $table.find('tbody :checkbox[name="keys"]');
+                    //页面中所选中的checkbox
+                    var selecteds = $table.find('tbody :checkbox:checked[name="keys"]');
+                    if (selecteds.length > 0) {
+                        // 启用禁用批量操作区
+                        $batchButtons.prop('disabled', false);
+                        //需要判断当前页面所有行的checkbox是否都选中，以此来决定是否需要改变checkbox#chkAll 的状态
+                        if (allbox.length == selecteds.length) {
+                            $table.find('#chkAll').prop('checked', true);
+                        } else {
+                            $table.find('#chkAll').prop('checked', false);
+                        }
+                    }
+                    else {
+                        $batchButtons.prop('disabled', true);
+                        $table.find('#chkAll').prop('checked', false);
+                    }
+                });
+            })
+        </script>
+    }
 }
