@@ -238,13 +238,13 @@ WriteLiteral("</td>\r\n");
             #line hidden
 WriteLiteral("                <td");
 
-WriteLiteral(" class=\"text-center\"");
+WriteLiteral(" class=\"text-left\"");
 
 WriteLiteral(">");
 
             
             #line 67 "..\..\Views\Shared\_List_Data_Item.cshtml"
-                                   Write(val);
+                                 Write(val);
 
             
             #line default
@@ -295,13 +295,13 @@ WriteLiteral("</td>\r\n");
             #line hidden
 WriteLiteral("                    <td");
 
-WriteLiteral(" class=\"text-center\"");
+WriteLiteral(" class=\"text-left\"");
 
 WriteLiteral(">");
 
             
             #line 84 "..\..\Views\Shared\_List_Data_Item.cshtml"
-                                       Write(Html.ActionLink(value + "", "Index", map.Provider.EntityType.Name, dic, null));
+                                     Write(Html.ActionLink(value + "", "Index", map.Provider.EntityType.Name, dic, null));
 
             
             #line default
@@ -319,21 +319,23 @@ WriteLiteral("</td>\r\n");
             #line hidden
 WriteLiteral("                    <td");
 
-WriteAttribute("title", Tuple.Create(" title=\"", 2757), Tuple.Create("\"", 2792)
+WriteLiteral(" class=\"text-left\"");
+
+WriteAttribute("title", Tuple.Create(" title=\"", 2771), Tuple.Create("\"", 2806)
             
             #line 88 "..\..\Views\Shared\_List_Data_Item.cshtml"
-, Tuple.Create(Tuple.Create("", 2765), Tuple.Create<System.Object, System.Int32>((value+"").IPToAddress()
+, Tuple.Create(Tuple.Create("", 2779), Tuple.Create<System.Object, System.Int32>((value+"").IPToAddress()
             
             #line default
             #line hidden
-, 2765), false)
+, 2779), false)
 );
 
 WriteLiteral(">");
 
             
             #line 88 "..\..\Views\Shared\_List_Data_Item.cshtml"
-                                                       Write(value);
+                                                                         Write(value);
 
             
             #line default
@@ -352,24 +354,26 @@ WriteLiteral("</td>\r\n");
             #line hidden
 WriteLiteral("                    <td");
 
+WriteLiteral(" class=\"text-left\"");
+
 WriteLiteral(" style=\"max-width:600px;overflow:hidden;white-space: nowrap;text-overflow: ellips" +
 "is;\"");
 
-WriteAttribute("title", Tuple.Create(" title=\"", 3061), Tuple.Create("\"", 3075)
+WriteAttribute("title", Tuple.Create(" title=\"", 3093), Tuple.Create("\"", 3107)
             
             #line 93 "..\..\Views\Shared\_List_Data_Item.cshtml"
-                                    , Tuple.Create(Tuple.Create("", 3069), Tuple.Create<System.Object, System.Int32>(value
+                                                      , Tuple.Create(Tuple.Create("", 3101), Tuple.Create<System.Object, System.Int32>(value
             
             #line default
             #line hidden
-, 3069), false)
+, 3101), false)
 );
 
 WriteLiteral(">");
 
             
             #line 93 "..\..\Views\Shared\_List_Data_Item.cshtml"
-                                                                                                                       Write(value);
+                                                                                                                                         Write(value);
 
             
             #line default
@@ -387,13 +391,13 @@ WriteLiteral("</td>\r\n");
             #line hidden
 WriteLiteral("                    <td");
 
-WriteLiteral("  class=\"text-center\"");
+WriteLiteral("  class=\"text-left\"");
 
 WriteLiteral(">");
 
             
             #line 97 "..\..\Views\Shared\_List_Data_Item.cshtml"
-                                        Write(value);
+                                      Write(value);
 
             
             #line default

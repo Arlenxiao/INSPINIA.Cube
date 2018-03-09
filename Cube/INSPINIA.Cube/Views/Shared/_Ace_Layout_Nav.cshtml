@@ -15,16 +15,18 @@
                 {
                     if (item.ID != 0)
                     {
-                        @*<a href="@(item.Url!=null? Url.Content(item.Url):"#")">@item.DisplayName</a>*@
-                        <a href="#">@item.DisplayName</a>
+                            <i>
+                                @*<a href="@(item.Url!=null? Url.Content(item.Url):"#")">@item.DisplayName</a>*@
+                                <a href="#">@item.DisplayName</a>
+                            </i>
                     }
                 }
             }
         </li>
         <li class="active">
-            <strong>
-                <a href="@Url.Content(menu.Url)" target="_blank">@(menu != null ? menu.DisplayName : ViewBag.Title)</a>
-            </strong>
+            <i>
+                <a href="@Url.Content(menu.Url)">@(menu != null ? menu.DisplayName : ViewBag.Title)</a>
+            </i>
         </li>
     </ol>
 }

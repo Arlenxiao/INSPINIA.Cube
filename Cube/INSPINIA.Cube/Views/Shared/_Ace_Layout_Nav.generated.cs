@@ -112,34 +112,29 @@ WriteLiteral("</a></strong></li>\r\n        <li>\r\n");
                 {
                     if (item.ID != 0)
                     {
-                        
-            
-            #line default
-            #line hidden
-            
-            #line 18 "..\..\Views\Shared\_Ace_Layout_Nav.cshtml"
-                                                                                                        
 
             
             #line default
             #line hidden
-WriteLiteral("                        <a");
+WriteLiteral("                            <i>\r\n                                ");
+
+WriteLiteral("\r\n                                <a");
 
 WriteLiteral(" href=\"#\"");
 
 WriteLiteral(">");
 
             
-            #line 19 "..\..\Views\Shared\_Ace_Layout_Nav.cshtml"
-                               Write(item.DisplayName);
+            #line 20 "..\..\Views\Shared\_Ace_Layout_Nav.cshtml"
+                                       Write(item.DisplayName);
 
             
             #line default
             #line hidden
-WriteLiteral("</a>\r\n");
+WriteLiteral("</a>\r\n                            </i>\r\n");
 
             
-            #line 20 "..\..\Views\Shared\_Ace_Layout_Nav.cshtml"
+            #line 22 "..\..\Views\Shared\_Ace_Layout_Nav.cshtml"
                     }
                 }
             }
@@ -151,33 +146,31 @@ WriteLiteral("        </li>\r\n        <li");
 
 WriteLiteral(" class=\"active\"");
 
-WriteLiteral(">\r\n            <strong>\r\n                <a");
+WriteLiteral(">\r\n            <i>\r\n                <a");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 870), Tuple.Create("\"", 899)
+WriteAttribute("href", Tuple.Create(" href=\"", 948), Tuple.Create("\"", 977)
             
-            #line 26 "..\..\Views\Shared\_Ace_Layout_Nav.cshtml"
-, Tuple.Create(Tuple.Create("", 877), Tuple.Create<System.Object, System.Int32>(Url.Content(menu.Url)
+            #line 28 "..\..\Views\Shared\_Ace_Layout_Nav.cshtml"
+, Tuple.Create(Tuple.Create("", 955), Tuple.Create<System.Object, System.Int32>(Url.Content(menu.Url)
             
             #line default
             #line hidden
-, 877), false)
+, 955), false)
 );
-
-WriteLiteral(" target=\"_blank\"");
 
 WriteLiteral(">");
 
             
-            #line 26 "..\..\Views\Shared\_Ace_Layout_Nav.cshtml"
-                                                             Write(menu != null ? menu.DisplayName : ViewBag.Title);
+            #line 28 "..\..\Views\Shared\_Ace_Layout_Nav.cshtml"
+                                             Write(menu != null ? menu.DisplayName : ViewBag.Title);
 
             
             #line default
             #line hidden
-WriteLiteral("</a>\r\n            </strong>\r\n        </li>\r\n    </ol>\r\n");
+WriteLiteral("</a>\r\n            </i>\r\n        </li>\r\n    </ol>\r\n");
 
             
-            #line 30 "..\..\Views\Shared\_Ace_Layout_Nav.cshtml"
+            #line 32 "..\..\Views\Shared\_Ace_Layout_Nav.cshtml"
 }
             
             #line default

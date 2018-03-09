@@ -64,7 +64,7 @@ else
                     val = System.EnumHelper.GetDescription((Enum)v) ?? v + "";
                 }
                 catch { }
-                <td class="text-center">@val</td>
+                <td class="text-left">@val</td>
             }
             else
             {
@@ -81,20 +81,20 @@ else
                     var dic = new RouteValueDictionary();
                     var key = map.Provider.Key;
                     if (!key.IsNullOrEmpty() && item.OriField != null) { dic[key] = entity[item.OriField.Name]; }
-                    <td class="text-center">@Html.ActionLink(value + "", "Index", map.Provider.EntityType.Name, dic, null)</td>
+                    <td class="text-left">@Html.ActionLink(value + "", "Index", map.Provider.EntityType.Name, dic, null)</td>
                 }
                 else if (item.Name.EqualIgnoreCase("CreateIP", "UpdateIP"))
                 {
-                    <td title="@((value+"").IPToAddress())">@value</td>
+                    <td class="text-left" title="@((value+"").IPToAddress())">@value</td>
                 }
                 else if (item.Name.EqualIgnoreCase("Remark", "Description"))
                 {
                     //防止内容过长
-                    <td style="max-width:600px;overflow:hidden;white-space: nowrap;text-overflow: ellipsis;" title="@value">@value</td>
+                    <td class="text-left" style="max-width:600px;overflow:hidden;white-space: nowrap;text-overflow: ellipsis;" title="@value">@value</td>
                 }
                 else
                 {
-                    <td  class="text-center">@value</td>
+                    <td  class="text-left">@value</td>
                 }
             }
             break;
