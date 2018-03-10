@@ -335,50 +335,50 @@ WriteLiteral("        <div");
 
 WriteLiteral(" class=\"footer\"");
 
-WriteLiteral(">\r\n            <div>\r\n                <strong>Copyright</strong> WsLink Company &" +
-"copy; 2014-");
+WriteLiteral(">\r\n");
+
+WriteLiteral("            ");
 
             
-            #line 63 "..\..\Views\Shared\_Ace_Layout.cshtml"
-                                                                 Write(DateTime.Now.Year);
+            #line 62 "..\..\Views\Shared\_Ace_Layout.cshtml"
+       Write(Html.Partial("_FooterBar"));
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <!-- plugin javascript-->\r\n" +
-"    <script");
+WriteLiteral("\r\n        </div>\r\n\r\n    </div>\r\n    <!-- plugin javascript-->\r\n    <script");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 2766), Tuple.Create("\"", 2840)
-, Tuple.Create(Tuple.Create("", 2772), Tuple.Create<System.Object, System.Int32>(Href("~/Template/js/plugins/datetimepicker/bootstrap-datetimepicker.min.js")
-, 2772), false)
+WriteAttribute("src", Tuple.Create(" src=\"", 2680), Tuple.Create("\"", 2754)
+, Tuple.Create(Tuple.Create("", 2686), Tuple.Create<System.Object, System.Int32>(Href("~/Template/js/plugins/datetimepicker/bootstrap-datetimepicker.min.js")
+, 2686), false)
 );
 
 WriteLiteral("></script>\r\n    <script");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 2864), Tuple.Create("\"", 2948)
-, Tuple.Create(Tuple.Create("", 2870), Tuple.Create<System.Object, System.Int32>(Href("~/Template/js/plugins/datetimepicker/locales/bootstrap-datetimepicker.zh-CN.js")
-, 2870), false)
+WriteAttribute("src", Tuple.Create(" src=\"", 2778), Tuple.Create("\"", 2862)
+, Tuple.Create(Tuple.Create("", 2784), Tuple.Create<System.Object, System.Int32>(Href("~/Template/js/plugins/datetimepicker/locales/bootstrap-datetimepicker.zh-CN.js")
+, 2784), false)
 );
 
 WriteLiteral("></script>\r\n    <script");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 2972), Tuple.Create("\"", 3030)
-, Tuple.Create(Tuple.Create("", 2978), Tuple.Create<System.Object, System.Int32>(Href("~/Template/js/plugins/switch/bootstrap-switch.min.js")
-, 2978), false)
+WriteAttribute("src", Tuple.Create(" src=\"", 2886), Tuple.Create("\"", 2944)
+, Tuple.Create(Tuple.Create("", 2892), Tuple.Create<System.Object, System.Int32>(Href("~/Template/js/plugins/switch/bootstrap-switch.min.js")
+, 2892), false)
 );
 
 WriteLiteral("></script>\r\n    <script");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 3054), Tuple.Create("\"", 3110)
-, Tuple.Create(Tuple.Create("", 3060), Tuple.Create<System.Object, System.Int32>(Href("~/Template/js/plugins/sweetalert/sweetalert.min.js")
-, 3060), false)
+WriteAttribute("src", Tuple.Create(" src=\"", 2968), Tuple.Create("\"", 3024)
+, Tuple.Create(Tuple.Create("", 2974), Tuple.Create<System.Object, System.Int32>(Href("~/Template/js/plugins/sweetalert/sweetalert.min.js")
+, 2974), false)
 );
 
 WriteLiteral("></script>\r\n\r\n    <script");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 3136), Tuple.Create("\"", 3165)
-, Tuple.Create(Tuple.Create("", 3142), Tuple.Create<System.Object, System.Int32>(Href("~/Template/cube/Cube.js")
-, 3142), false)
+WriteAttribute("src", Tuple.Create(" src=\"", 3050), Tuple.Create("\"", 3079)
+, Tuple.Create(Tuple.Create("", 3056), Tuple.Create<System.Object, System.Int32>(Href("~/Template/cube/Cube.js")
+, 3056), false)
 );
 
 WriteLiteral("></script>\r\n\r\n    <script");
@@ -431,7 +431,7 @@ WriteLiteral(@"
 WriteLiteral("    ");
 
             
-            #line 116 "..\..\Views\Shared\_Ace_Layout.cshtml"
+            #line 115 "..\..\Views\Shared\_Ace_Layout.cshtml"
 Write(RenderSection("scripts", required: false));
 
             

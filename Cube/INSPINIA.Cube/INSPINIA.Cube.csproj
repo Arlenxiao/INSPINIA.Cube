@@ -261,6 +261,46 @@
       <Generator>RazorGenerator</Generator>
       <LastGenOutput>_ListTree_Data_Item.generated.cs</LastGenOutput>
     </Content>
+    <Content Include="Views\Shared\_Xwater_Layout.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Xwater_Layout.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_Xwater_Left.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Xwater_Left.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_Xwater_Data_Profile.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Xwater_Data_Profile.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_Xwater_Chart.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Xwater_Chart.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_Xwater_Map.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Xwater_Map.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_Xwater_Data_Card.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Xwater_Data_Card.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_Xwater_Data_Grid.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Xwater_Data_Grid.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_Xwater_Data_Detail.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Xwater_Data_Detail.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_Xwater_SideBar.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Xwater_SideBar.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_FooterBar.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_FooterBar.generated.cs</LastGenOutput>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -610,6 +650,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_DateRange.cshtml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Shared\_FooterBar.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_FooterBar.cshtml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Shared\_Form_Action.generated.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -679,6 +724,51 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>_List_Toolbar_Search.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_Xwater_Chart.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Xwater_Chart.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_Xwater_Data_Card.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Xwater_Data_Card.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_Xwater_Data_Detail.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Xwater_Data_Detail.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_Xwater_Data_Grid.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Xwater_Data_Grid.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_Xwater_Data_Profile.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Xwater_Data_Profile.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_Xwater_Layout.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Xwater_Layout.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_Xwater_Left.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Xwater_Left.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_Xwater_Map.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Xwater_Map.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_Xwater_SideBar.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Xwater_SideBar.cshtml</DependentUpon>
     </Compile>
     <Compile Include="Views\_ViewStart.generated.cs">
       <AutoGen>True</AutoGen>
