@@ -5,6 +5,15 @@ VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INSPINIA.Cube", "INSPINIA.Cube\INSPINIA.Cube.csproj", "{FCBDD484-0EBF-4D56-A2B1-C448B79CC4BE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Image", "Image", "{F8CD0944-7E4F-4E79-92FE-C251DFF2060F}"
+	ProjectSection(SolutionItems) = preProject
+		Image\1.png = Image\1.png
+		Image\2.png = Image\2.png
+		Image\3.png = Image\3.png
+		Image\4.png = Image\4.png
+		Image\5.png = Image\5.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
