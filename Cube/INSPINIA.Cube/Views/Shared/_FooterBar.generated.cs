@@ -43,16 +43,20 @@ namespace ASP
         }
         public override void Execute()
         {
-WriteLiteral("<!--内容部分-->\r\n<div>\r\n    <strong>Copyright</strong> WsLink Company &copy; 2014-");
+WriteLiteral("<!--内容部分-->\r\n<div");
+
+WriteLiteral(" class=\"footer\"");
+
+WriteLiteral(">\r\n    <div>\r\n        <strong>Copyright</strong> WsLink Company &copy; 2014-");
 
             
-            #line 3 "..\..\Views\Shared\_FooterBar.cshtml"
-                                                     Write(DateTime.Now.Year);
+            #line 4 "..\..\Views\Shared\_FooterBar.cshtml"
+                                                         Write(DateTime.Now.Year);
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n</div>\r\n");
+WriteLiteral("\r\n    </div>\r\n</div>");
 
         }
     }
