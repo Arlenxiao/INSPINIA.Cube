@@ -81,7 +81,7 @@ else
                     var dic = new RouteValueDictionary();
                     var key = map.Provider.Key;
                     if (!key.IsNullOrEmpty() && item.OriField != null) { dic[key] = entity[item.OriField.Name]; }
-                    <td class="text-left">@Html.ActionLink(value + "", "Index", map.Provider.EntityType.Name, dic, null)</td>
+                    <td class="text-left">@entity[item.OriField.Name] @Html.ActionLink(value + "", "Index", map.Provider.EntityType.Name, dic, new { title = entity[item.OriField.Name] })</td>
                 }
                 else if (item.Name.EqualIgnoreCase("CreateIP", "UpdateIP"))
                 {
@@ -94,7 +94,7 @@ else
                 }
                 else
                 {
-                    <td  class="text-left">@value</td>
+                    <td class="text-left">@value</td>
                 }
             }
             break;
