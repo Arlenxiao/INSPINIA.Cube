@@ -370,20 +370,37 @@ WriteLiteral("></script>\r\n\r\n    <script");
 
 WriteLiteral(" type=\"text/javascript\"");
 
-WriteLiteral(@">
-        $('select').addClass(""form-control"");
-        //$(""input[type=checkbox]"").bootstrapSwitch();
-        $(""input.chkSwitch"").bootstrapSwitch();
-
-        $("".form_datetime"").datetimepicker({
-            format: $(this).attr(""dateformat""),
-            language: ""zh-CN"",
-            autoclose: true,
-            todayBtn: true,
-            pickerPosition: ""bottom-left""
-        });
-
-        ");
+WriteLiteral(">\r\n        $(\'select\').addClass(\"form-control\");\r\n        //$(\"input[type=checkbo" +
+"x]\").bootstrapSwitch();\r\n        $(\"input.chkSwitch\").bootstrapSwitch();\r\n\r\n    " +
+"    $(\'.form_datetime\').each(function () {\r\n            var df = $(this).attr(\'d" +
+"ateformat\');\r\n            if (!df) {\r\n                $(this).attr(\'dateformat\'," +
+" \'yyyy-mm-dd hh:ii:ss\');\r\n                $(this).width(140);\r\n            }\r\n  " +
+"          else {\r\n                // 把C#标准格式化替换为控件格式\r\n                df = df.re" +
+"place(\'mm\', \'ii\').replace(\'MM\', \'mm\').replace(\'HH\', \'hh\');\r\n                $(th" +
+"is).attr(\'dateformat\', df);\r\n\r\n                // 根据时间日期格式，锁定日期输入框宽度\r\n          " +
+"      if (df.indexOf(\'hh\') >= 0)\r\n                    $(this).width(140);\r\n     " +
+"           else\r\n                    $(this).width(80);\r\n            }\r\n\r\n      " +
+"      //根据日期格式自动推算日期选择view显示的范围\r\n            var sv = 2;\r\n            var mv = 2" +
+";\r\n            var autoView = $(this).attr(\'autoView\');\r\n            if (autoVie" +
+"w != \'false\') {\r\n                df = $(this).attr(\'dateformat\');\r\n             " +
+"   if (df.indexOf(\'ii\') >= 0) {\r\n                    mv = 0;\r\n                  " +
+"  if (df.indexOf(\'dd\') >= 0) {\r\n                        sv = 2;\r\n               " +
+"     } else {\r\n                        sv = 1;\r\n                    }\r\n         " +
+"       } else if (df.indexOf(\'hh\') >= 0) {\r\n                    mv = 1;\r\n       " +
+"             if (df.indexOf(\'dd\') >= 0) {\r\n                        sv = 2;\r\n    " +
+"                } else {\r\n                        sv = 1;\r\n                    }" +
+"\r\n                } else if (df.indexOf(\'dd\') >= 0) {\r\n                    mv = " +
+"2;\r\n                    sv = 2;\r\n                } else if (df.indexOf(\'mm\') >= " +
+"0) {\r\n                    mv = 3;\r\n                    sv = 3;\r\n                " +
+"} else if (df.indexOf(\'yyyy\') >= 0) {\r\n                    mv = 4;\r\n            " +
+"        sv = 4;\r\n                }\r\n            }\r\n\r\n            $(this).attr(\'s" +
+"tartview\', sv);\r\n            $(this).attr(\'minview\', mv);\r\n        });\r\n        " +
+"$(\"[dateformat]\").each(function () {\r\n            $(this).datetimepicker({\r\n    " +
+"            format: $(this).attr(\"dateformat\"),\r\n                autoclose: true" +
+",\r\n                language: \"zh-CN\",\r\n                forceParse: false,\r\n     " +
+"           startView: parseInt($(this).attr(\'startview\')),\r\n                minV" +
+"iew: parseInt($(this).attr(\'minview\'))\r\n            });\r\n        });\r\n\r\n        " +
+"");
 
 WriteLiteral(@"
         $('tr').dblclick(function () {
@@ -416,7 +433,7 @@ WriteLiteral(@"
 WriteLiteral("    ");
 
             
-            #line 111 "..\..\Views\Shared\_Ace_Layout.cshtml"
+            #line 167 "..\..\Views\Shared\_Ace_Layout.cshtml"
 Write(RenderSection("scripts", required: false));
 
             
