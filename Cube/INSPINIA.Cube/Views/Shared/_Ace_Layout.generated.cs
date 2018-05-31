@@ -398,9 +398,9 @@ WriteLiteral(">\r\n        $(\'select\').addClass(\"form-control\");\r\n        
 "$(\"[dateformat]\").each(function () {\r\n            $(this).datetimepicker({\r\n    " +
 "            format: $(this).attr(\"dateformat\"),\r\n                autoclose: true" +
 ",\r\n                language: \"zh-CN\",\r\n                forceParse: false,\r\n     " +
-"           startView: parseInt($(this).attr(\'startview\')),\r\n                minV" +
-"iew: parseInt($(this).attr(\'minview\'))\r\n            });\r\n        });\r\n\r\n        " +
-"");
+"           todayBtn: true,\r\n                startView: parseInt($(this).attr(\'st" +
+"artview\')),\r\n                minView: parseInt($(this).attr(\'minview\'))\r\n       " +
+"     });\r\n        });\r\n\r\n        ");
 
 WriteLiteral(@"
         $('tr').dblclick(function () {
@@ -433,7 +433,7 @@ WriteLiteral(@"
 WriteLiteral("    ");
 
             
-            #line 167 "..\..\Views\Shared\_Ace_Layout.cshtml"
+            #line 168 "..\..\Views\Shared\_Ace_Layout.cshtml"
 Write(RenderSection("scripts", required: false));
 
             
