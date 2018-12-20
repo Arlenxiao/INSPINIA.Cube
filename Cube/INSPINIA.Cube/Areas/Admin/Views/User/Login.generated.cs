@@ -147,8 +147,31 @@ WriteLiteral(" />\r\n    <!-- 自定义样式-->\r\n    <!-- 仅用于过渡期�
 "at: left; margin-left: 7px; line-height: 20px; padding-top: 5px; text-transform:" +
 " capitalize; }\r\n        .cube-login .btn { float: right; font-size: 14px; color:" +
 " #fff; background: #00b4ef; border-radius: 30px; padding: 8px 50px; border: none" +
-"; text-transform: capitalize; transition: all 0.5s ease 0s; }\r\n    </style>\r\n</h" +
-"ead>\r\n<body>\r\n    <!--布局容器-->\r\n    <div");
+"; text-transform: capitalize; transition: all 0.5s ease 0s; }\r\n    </style>\r\n   " +
+" <!-- JQuery作为一等公民，页面内部随时可能使用 -->\r\n    <script");
+
+WriteAttribute("src", Tuple.Create(" src=\"", 3099), Tuple.Create("\"", 3134)
+, Tuple.Create(Tuple.Create("", 3105), Tuple.Create<System.Object, System.Int32>(Href("~/Template/js/jquery-2.1.1.js")
+, 3105), false)
+);
+
+WriteLiteral("></script>\r\n    <script");
+
+WriteAttribute("src", Tuple.Create(" src=\"", 3158), Tuple.Create("\"", 3194)
+, Tuple.Create(Tuple.Create("", 3164), Tuple.Create<System.Object, System.Int32>(Href("~/Template/js/bootstrap.min.js")
+, 3164), false)
+);
+
+WriteLiteral(@"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src=""https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js""></script>
+      <script src=""https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js""></script>
+    <![endif]-->
+</head>
+<body>
+    <!--布局容器-->
+    <div");
 
 WriteLiteral(" class=\"container\"");
 
@@ -169,7 +192,7 @@ WriteLiteral(">\r\n");
 WriteLiteral("                    ");
 
             
-            #line 48 "..\..\Areas\Admin\Views\User\Login.cshtml"
+            #line 56 "..\..\Areas\Admin\Views\User\Login.cshtml"
                Write(Html.Partial("_Login_Login"));
 
             
@@ -180,7 +203,7 @@ WriteLiteral("\r\n");
 WriteLiteral("                    ");
 
             
-            #line 49 "..\..\Areas\Admin\Views\User\Login.cshtml"
+            #line 57 "..\..\Areas\Admin\Views\User\Login.cshtml"
                Write(Html.Partial("_Login_Forgot"));
 
             
@@ -191,36 +214,14 @@ WriteLiteral("\r\n");
 WriteLiteral("                    ");
 
             
-            #line 50 "..\..\Areas\Admin\Views\User\Login.cshtml"
+            #line 58 "..\..\Areas\Admin\Views\User\Login.cshtml"
                Write(Html.Partial("_Login_Register"));
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <!-" +
-"- JQuery作为一等公民，页面内部随时可能使用 -->\r\n    <script");
-
-WriteAttribute("src", Tuple.Create(" src=\"", 3513), Tuple.Create("\"", 3548)
-, Tuple.Create(Tuple.Create("", 3519), Tuple.Create<System.Object, System.Int32>(Href("~/Template/js/jquery-2.1.1.js")
-, 3519), false)
-);
-
-WriteLiteral("></script>\r\n    <script");
-
-WriteAttribute("src", Tuple.Create(" src=\"", 3572), Tuple.Create("\"", 3608)
-, Tuple.Create(Tuple.Create("", 3578), Tuple.Create<System.Object, System.Int32>(Href("~/Template/js/bootstrap.min.js")
-, 3578), false)
-);
-
-WriteLiteral(@"></script>
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src=""https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js""></script>
-      <script src=""https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js""></script>
-    <![endif]-->
-
-</body>
-</html>");
+WriteLiteral("\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</body>" +
+"\r\n</html>");
 
         }
     }
